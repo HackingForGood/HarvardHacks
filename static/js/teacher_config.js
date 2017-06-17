@@ -57,6 +57,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var classesRef = firebase.database().ref('classes/');
       classesRef.on('value', function(snapshot) {
         console.log(snapshot.val());
+        $("#classes").find('option').remove().end();
         for (var key in snapshot.val()) {
         console.log(snapshot.val()[key].className);
             $("#classes").append($("<option></option>")
@@ -64,7 +65,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                           .text(key));
 
       }
-      // updateStarCount(postElement, snapshot.val());
       });
   } else {
     console.log("not signed in");
