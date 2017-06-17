@@ -136,7 +136,9 @@ Classroom.prototype.show_heatmap = function() {
     });
     for (var i = 0; i < data.length; i++) {
         var talk_status;
-        if (i < this.students.length / 3)
+        if (data[i]['time'] == 0)
+            talk_status = 1; // if they haven't talked, call on them
+        else if (i < this.students.length / 3)
             talk_status = -1; // talked the most, don't call on them
         else if (i > 2 * this.students.length / 3)
             talk_status = 1; // talked the least, call on them
