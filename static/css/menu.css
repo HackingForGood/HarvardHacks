@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "RobotoBold";
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SFUltralight";
+    src: url("fonts/SF-UI-Display-Ultralight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/Ubuntu-R.ttf") format("truetype");
+}
+
+#banner {
+  background: #ce4257;
+  padding: 10px 0 10px 0;
+  border-bottom: 2px solid #ffffff;
+}
+
+#banner > p {
+  font-family: 'SFUltralight';
+  font-weight: 400;
+  margin: 0;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#banner > p > b {
+  font-family: 'SFUltralight';
+}
+
+#top {
+  width: 100%;
+  background: #a10000;
+}
+
+#top > a {
+  height: 50%;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+#cssmenu > form {
+  margin: 3px 2% 0 0;
+}
+
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  background-color: #ffffff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-color: rgb(204, 204, 204);
+  border-right-color: rgb(204, 204, 204);
+  border-bottom-color: rgb(204, 204, 204);
+  border-left-color: rgb(204, 204, 204);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-style: solid;
+}
+
+.glyphicon {
+  color: #a10000;
+}
+
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+
+.form-control{width:20%}
+.navbar-nav > li > a {
+  border-right: 1px solid #ddd;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.navbar-nav:last-child{ border-right:0}
+
+.nav-header a.buy-btn.pull-right {
+    padding: 0 10px 0 10px;
+    margin: 1px 3px 0 3px;
+    line-height: 38px;
+    color: #ffffff;
+    background: #ce4257;
+    border-radius: 100%;
+    -webkit-transition: all 1.0s;
+    -moz-transition: all 1.0s;
+    -ms-transition: all 1.0s;
+    -o-transition: all 1.0s;
+    transition: all 1.0s;
+}
+
+a.buy-btn.pull-right.far-end {
+    margin-right: 2%;
+}
+
+a.buy-btn.pull-right:hover {
+    text-decoration: none;
+    background: #ffffff;
+    border: #ffffff;
+    border-radius: 100%;
+    color: #ce4257;
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -ms-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    transition: all 0.15s;
+}
+
+.container #cssmenu,
+.container #cssmenu ul,
+.container #cssmenu ul li,
+.container #cssmenu ul li a,
+.container #cssmenu #menu-button,
+#top {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container #cssmenu ul {
+    margin-left: 50px;
+}
+
+@media all and (max-width: 1193px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+    .container #cssmenu ul {
+        margin-left: 0;
+    }
+}
+
+.container #cssmenu #menu-button {
+  display: none;
+}
+
+.nav-header .container #cssmenu {
+  width: 100%;
+  left: 0;
+  line-height: 1;
+  background: #ce4257;
+  height: 55px;
+  border-top: 5px solid #a10000;
+  margin-bottom: 35px;
+  -webkit-transition: all 1.0s;
+  -moz-transition: all 1.0s;
+  -ms-transition: all 1.0s;
+  -o-transition: all 1.0s;
+  transition: all 1.0s;
+}
+
+.container #cssmenu a {
+  font-family: 'RobotoBold', sans-serif;
+  font-weight: 400;
+}
+
+.container #menu-line {
+  position: relative;
+  margin: 0;
+  height: 5px;
+  background: #ffffff;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.container #cssmenu > ul > li {
+  float: left;
+}
+
+.nav-header .container #cssmenu > ul > li > a {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 17px;
+    margin-right: 17px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'SFUltralight';
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    -webkit-transition: all 1.0s ease;
+    -moz-transition: all 1.0s ease;
+    -ms-transition: all 1.0s ease;
+    -o-transition: all 1.0s ease;
+    transition: all 1.0s ease;
+}
+
+.nav-header .container #cssmenu > ul > li.header-nav > a {
+    background: #ce4257 !important;
+    color: #ffffff !important;
+}
+
+.nav-header .container #cssmenu .end {
+    margin-top: 4.5px;
+    margin-bottom: 7px;
+    margin-left: 17px;
+    margin-right: 17px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'SFUltralight';
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #720026;
+    border-radius: 6px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.nav-header .container #cssmenu .end:hover {
+    background: #4F000b;
+    pointer: cursor;
+    border-radius: 6px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+@media all and (min-width: 1175px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+    .container #cssmenu > ul > li.active > a {
+      background: #ffffff;
+      border-radius: 6px;
+      color: #ce4257 !important;
+    }
+    
+    .container #cssmenu > ul > li:hover > a {
+      background: #ffffff;
+      border-radius: 6px;
+      color: #ce4257 !important;
+    }
+}
+
+@media all and (max-width: 1175px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  .container #cssmenu {
+    width: 100%;
+  }
+
+  .container #cssmenu ul {
+    width: 100%;
+    background: #ce4257;
+    display: none;
+  }
+
+  .container #cssmenu ul > li {
+    background: #ce4257;
+  }
+
+  .container #cssmenu.align-center > ul,
+  .container #cssmenu.align-right ul ul {
+    text-align: left;
+  }
+
+  .container #cssmenu ul li,
+  .container #cssmenu ul ul li,
+  .container #cssmenu ul li:hover > ul > li {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #ffffff;
+  }
+
+  .container #cssmenu ul li:last-child,
+  .container #cssmenu ul ul li:last-child,
+  .container #cssmenu ul li:hover > ul > li:last-child {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .container #cssmenu ul li a,
+  .container #cssmenu ul ul li a {
+    width: 100%;
+    background: #ce4257;
+  }
+
+  #cssmenu > ul > li,
+  #cssmenu.align-center > ul > li,
+  #cssmenu.align-right > ul > li {
+    float: none;
+    display: inline-block;
+  }
+
+  .container #menu-line {
+    display: none;
+  }
+
+  .container #cssmenu #menu-button {
+    display: block;
+    padding: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .container #cssmenu #menu-button::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 15px;
+    height: 2px;
+    background: #ffffff;
+  }
+  
+  .container #cssmenu #menu-button::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    display: block;
+    width: 15px;
+    height: 7px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+}
+
+.nav-header .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container #cssmenu, #menubutton {
+    width: 100%;
+    z-index: 999;
+}

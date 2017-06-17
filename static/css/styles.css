@@ -1,9 +1,22 @@
+@font-face {
+    font-family: "RobotoBold";
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
 
+@font-face {
+    font-family: "SFUltralight";
+    src: url("fonts/SF-UI-Display-Ultralight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/Ubuntu-R.ttf") format("truetype");
+}
 
 .list-box {
   padding-top: 5%;
   text-align: center;
-  font-family: 'GothamBold';
+  font-family: 'SFUltralight';
   margin-bottom: 4%;
   margin: 0;
   padding: 0;
@@ -22,4 +35,29 @@
 
 select {
   width: 20%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    margin-top: 35px;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+    font-family: 'SFUltralight';
+}
+
+footer p b {
+    font-weight: 700;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #2d2e30;
 }
