@@ -14,9 +14,9 @@
    <option>text4</option>
    <option>text5</option> -->
 </select>
-<input type="text" style="width:100%" id="newclass">
-<button type="button" class="col-xs-3 add">Add</button>
-<button type="button" class="col-xs-6 removeClass">Remove Selected Classes</button>
+<button type="button" class="col-xs-12 removeClass">Remove Selected Classes</button>
+<input type="text" style="width:70%" id="newClass" placeholder="Class name">
+<button type="button" class="col-xs-3 addClass">Add</button>
 </div>
 <div class="col-xs-6">
 <select class="list-box" name="sometext" multiple="multiple">
@@ -26,9 +26,13 @@
    <option>text4</option>
    <option>text5</option>
 </select>
-<input type="text" style="width:100%" id="newstudent">
-<button type="button" class="col-xs-3 add">Add</button>
-<button type="button" class="col-xs-6 removeStudents">Remove Selected Students</button>
+<button type="button" class="col-xs-12 removeStudents">Remove Selected Students</button>
+<input type="text" style="width:70%" id="studentName" placeholder="Student Name">
+<input type="text" style="width:70%" id="studentEmail"placeholder="Student Email">
+<!-- <input type="text" style="width:70%" id="newstudent" placeholder="Student Photo"> -->
+<div style="width=100%">
+<button type="button" class="col-xs-6 addStudent" >Add Student</button>
+</div>
 </div>
 </div>
 {% endblock %}
