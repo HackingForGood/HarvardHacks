@@ -5,5 +5,27 @@
 {% endblock %}
 
 {% block body %}
-Teacher config page
+<div class="row">
+<div class="col-xs-6">
+<select class="list-box" id="classes" multiple="multiple">
+   <option>text1</option>
+   <option>text2</option>
+   <option>text3</option>
+   <option>text4</option>
+   <option>text5</option>
+</select>
+<input type="text" style="width:100%" id="newclass">
+<button type="button" onclick="add()" class="col-xs-3">Add</button>
+<button type="button" class="col-xs-3">Remove</button>
+</div>
+<div class="col-xs-6">
+<select class="list-box" name="sometext" multiple="multiple">
+   <option>text1</option>
+   <option>text2</option>
+   <option>text3</option>
+   <option>text4</option>
+   <option>text5</option>
+</select>
+</div>
+</div>
 {% endblock %}
