@@ -5,31 +5,85 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+        <!-- custom css and bootstrap -->
+        <link href="{{ url_for('static', filename='css/menu.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+        <!-- import JavaScript libraries and files -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/classie.js') }}"></script>
+
+        <!-- initialize Firebase -->
         <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
         <script>
-          // Initialize Firebase
-          var config = {
-            apiKey: "AIzaSyD2Jxnt0POcq0i-TkLhhf7Wy2LLtwyPUh8",
-            authDomain: "sullivan-4276f.firebaseapp.com",
-            databaseURL: "https://sullivan-4276f.firebaseio.com",
-            projectId: "sullivan-4276f",
-            storageBucket: "",
-            messagingSenderId: "646145992545"
-          };
-          firebase.initializeApp(config);
+            var config = {
+                apiKey: "AIzaSyD2Jxnt0POcq0i-TkLhhf7Wy2LLtwyPUh8",
+                authDomain: "sullivan-4276f.firebaseapp.com",
+                databaseURL: "https://sullivan-4276f.firebaseio.com",
+                projectId: "sullivan-4276f",
+                storageBucket: "",
+                messagingSenderId: "646145992545"
+            };
+            firebase.initializeApp(config);
         </script>
-        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
-        {% block head %}
-        {% endblock %}
+
+        <!-- for dynamic url routing -->
+        {{ JSGlue.include() }}
+
+        <title>{% block title %}{% endblock %} - Amplify</title>
+
+        {% block head %}{% endblock %}
     </head>
     <body>
-        <div class="container">
-        {% block body %}
-        {% endblock %}
+        <!-- Nav Menu -->
+        <div id="header" class="nav-header">
+            <div class="container">
+                <div id="cssmenu">
+                    <!-- determines which page the user is viewing in order to format the header bar -->
+                    <ul>
+                        {% if true %}
+                        <li {% if 'index' == active_page %}class="active"{% endif %}><a href="{{ url_for('index') }}">Home</a></li>
+                        <li {% if 'students' == active_page %}class="active"{% endif %}><a href="{{ url_for('student') }}">Students</a></li>
+                        <li {% if 'data' == active_page %}class="active"{% endif %}><a href="{{ url_for('student') }}">Data</a></li>
+                        {% else %}
+                        <li {% if 'signup' == active_page %}class="active"{% endif %}><a href="{{ url_for('student') }}">Sign Up</a></li>
+                        {% endif %}
+                    </ul>
+                    <!-- social buttons -->
+                    <a href="mailto:email@email.org" class="buy-btn pull-right far-end" target="_blank"><i class="fa fa-fw fa-envelope" id="social1"></i></a>
+                    <a href="https://www.facebook.com" class="buy-btn pull-right" target="_blank"><i class="fa fa-fw fa-facebook" id="social2"></i></a>
+
+                    <!-- if a user is logged in -->
+                    {% if true %}
+                    <!-- allow them to log out -->
+                    <a class="pull-right end" href="{{ url_for('login') }}">Log Out</a>
+                    <!-- else allow the user to log in -->
+                    {% else %}
+                    <a class="pull-right end" href="{{ url_for('login') }}">Log In</a>
+                    {% endif %}
+                </div>
+            </div>
         </div>
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer class="text-center">
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p><b>Amplify</b>, &copy; 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
-    {% block script %}
-    {% endblock %}
+    {% block script %}{% endblock %}
 </html>

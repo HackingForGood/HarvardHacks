@@ -58,3 +58,5 @@ typings/
 .env
 
 __pycache__/*
+
+.idea/

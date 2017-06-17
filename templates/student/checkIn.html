@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block script %}
+    <script src="{{ url_for('static', filename='js/student.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="header">
+        <!-- TODO: add student name, class name -->
+        <h4 class="title">Hi Hailey, check-in to class</h4>
+    </div>
+
+    <div class="classes">
+        <!-- <a href="{{ url_for('student.feedback') }}">Roster</a> -->
+        <!-- todo: for loop over classes -->
+        <div class="class" id="m" onclick="checkIn()"> Math</div>
+        <div class="class" id="e">English</div>
+        <div class="class" id="s">Science</div>
+        <div class="class" id="add">Add Class</div>
+    </div>
+</div>
+{% endblock %}
