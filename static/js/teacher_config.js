@@ -9,7 +9,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log("signed in");
     var user = firebase.auth().currentUser;
     var uid = user.uid;
-    console.log(user);
+    // console.log(user);
     function addClass (className) {
       // '/user-posts/' + uid + '/' + newPostKey
       if (className != undefined) {
@@ -53,6 +53,19 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
       writeTeacherData("hailey", "hjames");
       console.log("ran");
+
+      var classesRef = firebase.database().ref('classes/');
+      classesRef.on('value', function(snapshot) {
+        console.log(snapshot.val());
+        for (var key in snapshot.val()) {
+        console.log(snapshot.val()[key].className);
+            $("#classes").append($("<option></option>")
+                          .attr("value",key)
+                          .text(key));
+
+      }
+      // updateStarCount(postElement, snapshot.val());
+      });
   } else {
     console.log("not signed in");
   }
