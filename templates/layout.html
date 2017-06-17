@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {{ JSGlue.include() }}
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -8,6 +9,7 @@
         <!-- custom css and bootstrap -->
         <link href="{{ url_for('static', filename='css/menu.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
         <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
@@ -16,6 +18,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
         <script src="{{ url_for('static', filename='js/classie.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
 
         <!-- initialize Firebase -->
         <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>

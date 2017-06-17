@@ -88,7 +88,7 @@
 }
 
 .glyphicon {
-    color: #a10000;
+    color: #4f000b;
 }
 
 /* stop the glowing blue shadow */
@@ -253,7 +253,7 @@ a.buy-btn.pull-right:hover {
 }
 
 .nav-header .container #cssmenu .end:hover {
-    background: #4F000b;
+    background: #4f000b;
     pointer: cursor;
     border-radius: 6px;
     -webkit-transition: all 0.3s ease;

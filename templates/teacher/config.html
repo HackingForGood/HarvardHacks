@@ -1,34 +1,54 @@
 {% extends "layout.html" %}
+{% set active_page = "config" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block head %}
+    <link href="{{ url_for('static', filename='css/config.css') }}" rel="stylesheet"/>
+{% endblock %}
 
 {% block script %}
     <script src="{{ url_for('static', filename='js/teacher_config.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-<div class="row">
-<div class="col-xs-6">
-<select class="list-box" id="classes" multiple="multiple">
-   <!-- <option>text1</option>
-   <option>text2</option>
-   <option>text3</option>
-   <option>text4</option>
-   <option>text5</option> -->
-</select>
-<input type="text" style="width:100%" id="newclass">
-<button type="button" class="col-xs-3 add">Add</button>
-<button type="button" class="col-xs-6 removeClass">Remove Selected Classes</button>
+<div class="row select-boxes">
+    <div class="col-xs-6">
+        <h1>Classes</h1>
+        <hr>
+        <label for="class-select">Existing Classes</label>
+        <select class="selectpicker" id="class-select" multiple title="Select classes...">
+           <option>class1</option>
+           <option>class2</option>
+           <option>class3</option>
+           <option>class4</option>
+           <option>class5</option>
+        </select>
+        <button type="button" class="btn btn-config">Remove Selected Classes</button>
+        <br><br><br>
+        <label for="class-name">New Class</label>
+        <input type="text" class="form-control text-input" id="class-name" placeholder="AP Calculus BC">
+        <button type="button" class="btn btn-config">Add Class</button>
+    </div>
+    <div class="col-xs-6">
+        <h1>Students</h1>
+        <hr>
+        <label for="student-select">Existing Students</label>
+        <select class="list-box selectpicker" id="student-select" multiple title="Select students...">
+           <option>student1</option>
+           <option>student2</option>
+           <option>student3</option>
+           <option>student4</option>
+           <option>student5</option>
+        </select>
+        <button type="button" class="btn btn-config">Remove Selected Students</button>
+        <br><br><br>
+        <label for="student-name">New Student</label>
+        <input type="text" class="form-control text-input" id="student-name" placeholder="Jane Doe">
+        <button type="button" class="btn btn-config">Add Student</button>
+    </div>
 </div>
-<div class="col-xs-6">
-<select class="list-box" name="sometext" multiple="multiple">
-   <option>text1</option>
-   <option>text2</option>
-   <option>text3</option>
-   <option>text4</option>
-   <option>text5</option>
-</select>
-<input type="text" style="width:100%" id="newstudent">
-<button type="button" class="col-xs-3 add">Add</button>
-<button type="button" class="col-xs-6 removeStudents">Remove Selected Students</button>
-</div>
-</div>
+
 {% endblock %}
