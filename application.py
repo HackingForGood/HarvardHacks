@@ -44,3 +44,7 @@ def student_yes():
     # TODO: localize to a specific class
     socketio.emit('yes', {'data': 'none'})
     return jsonify({'success': True})
+
+if __name__ == "__main__":
+    port = int(os.environ.get('PORT', 5000))
+    socketio.run(host='0.0.0.0', port=port)
