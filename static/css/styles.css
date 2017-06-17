@@ -13,6 +13,53 @@
     src: url("fonts/Ubuntu-R.ttf") format("truetype");
 }
 
+/*.container {
+    display:flex;
+    width: auto;
+}*/
+
+h4 {
+    text-align: center;
+    font-size: 60px;
+    margin: 40px;
+    /*margin-bottom: 30px;*/
+    font-family: 'GothamBold';
+
+}
+
+.classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*flex-flow: wrap;*/
+    /*background-color: blue;*/
+}
+
+.btn {
+    /*background: tomato;*/
+    margin: 80px;
+    width: 300px;
+    height: 150px;
+    font-size: 2em;
+
+    /*line-height: 75;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    border-style: solid;
+    border-width: thin;
+    border-color: grey;*/
+
+}
+
+/*#m{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}*/
+
 .list-box {
   padding-top: 5%;
   text-align: center;
@@ -21,6 +68,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  border-radius: 8px;
 }
 
 .containerLeft {
