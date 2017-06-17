@@ -7,3 +7,9 @@ function add() {
   var classes = document.getElementById("classes");
   classes.options[classes.options.length] = new Option(newclass, newclass);
 }
+
+$( ".remove" ).click(function() {
+    console.log("remove clicked");
+    console.log($(this).siblings("select").find(":selected"));
+    $( this ).siblings( "select").find(":selected").remove();
+  });
