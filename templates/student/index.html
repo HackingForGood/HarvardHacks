@@ -5,14 +5,16 @@
 {% endblock %}
 
 {% block body %}
-<div class="container">
+<!-- <div class="container"> -->
     <div class="header">
         <!-- TODO: add student name, class name -->
-        <h4 class="title">Hi Hailey, check-in to class</h4>
+        <h4 class="title">Welcome to class</h4>
     </div>
 
     <div class="classes">
-        <button type="button" class="btn btn-primary">?</button>
+        <button type="button" class="btn btn-primary" onclick="question()">?</button>
+        <button type="button" class="btn btn-success" onclick="go()">Go</button>
+        <button type="button" class="btn btn-warning" onclick="slow()">Slow</button>
     </div>
-</div>
+<!-- </div> -->
 {% endblock %}
