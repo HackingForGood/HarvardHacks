@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "RobotoBold";
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SFUltralight";
+    src: url("fonts/SF-UI-Display-Ultralight.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "RobotoCondensed";
+    src: url("fonts/Roboto-Light.ttf") format("truetype");
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.select-boxes {
+    font-family: 'SFUltralight';
+}
+
+.dropdown-toggle {
+    margin-bottom: 5px;
+}
+
+.btn-config {
+    background: #720026;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    font-family: 'SFUltralight';
+    color: #ffffff
+}
+
+.btn-config:hover {
+    background: #4f000b;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out;
+    -o-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    color: #ffffff;
+}
+
+.text-input {
+    margin-bottom: 5px;
+}
+
+@media all and (max-width: 800px) {
+    .last-section {
+        margin-top: 50px;
+    }
+}
