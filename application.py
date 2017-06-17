@@ -19,6 +19,10 @@ def verify_login():
     # TODO: add verification
     return True
 
+@app.route("/teachers/config")
+def teacher_config():
+    return render_template("teacher/config.html")
+
 @app.route("/students")
 def student():
     pass
