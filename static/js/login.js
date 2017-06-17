@@ -4,8 +4,9 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-  console.log(user);
-  // ...
+
+  authenticate(user, token);
+
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -16,3 +17,14 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var credential = error.credential;
   // ...
 });
+
+function authenticate(user, token) {
+    var parameters = {
+        'user': user.email,
+        'token': token
+    };
+    $.post(Flask.url_for('verify_login'), parameters)
+    .done(function(data, textStatus, jqXHR) {
+        console.log('test');
+    });
+}
