@@ -1,6 +1,11 @@
 var heatmap = false;
 
 window.onload = function() {
+    class_load();
+    feedback_load();
+}
+
+function class_load() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             configure(user);
