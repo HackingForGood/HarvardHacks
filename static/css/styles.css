@@ -13,10 +13,9 @@
     src: url("fonts/Ubuntu-R.ttf") format("truetype");
 }
 
-/*.container {
-    display:flex;
-    width: auto;
-}*/
+* {
+    z-index: 1;
+}
 
 h4 {
     text-align: center;

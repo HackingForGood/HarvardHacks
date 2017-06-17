@@ -49,3 +49,9 @@
 .text-input {
     margin-bottom: 5px;
 }
+
+@media all and (max-width: 800px) {
+    .last-section {
+        margin-top: 50px;
+    }
+}
