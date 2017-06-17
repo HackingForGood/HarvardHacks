@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block title %}
+    Teachers
+{% endblock %}
+
 {% block script %}
 <script src="{{ url_for('static', filename='js/teachers.js') }}"></script>
 <script src="{{ url_for('static', filename='js/feedback.js') }}"></script>
@@ -32,7 +36,6 @@
         </div>
     </div> <!-- /home -->
     <div id="feedback" class="tab-pane">
-        Feedback
         <div id="feedback-area">
         </div>
     </div> <!-- /feedback -->

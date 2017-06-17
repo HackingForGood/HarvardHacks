@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block title %}
+    Students
+{% endblock %}
+
 {% block script %}
     <script src="{{ url_for('static', filename='js/student.js') }}"></script>
 {% endblock %}
@@ -8,13 +12,13 @@
 <!-- <div class="container"> -->
     <div class="header">
         <!-- TODO: add student name, class name -->
-        <h4 class="title">Welcome to class</h4>
+        <h4 class="title">Welcome to class!</h4>
     </div>
 
     <div class="classes">
-        <button type="button" class="btn btn-primary" onclick="question()">?</button>
+        <!-- <button type="button" class="btn btn-primary" onclick="question()">?</button> -->
         <button id="vote-yes" type="button" class="btn btn-success">Yes</button>
-        <button id="vote-no" type="button" class="btn btn-warning">No</button>
+        <button id="vote-no" type="button" class="btn btn-danger">No</button>
     </div>
 <!-- </div> -->
 {% endblock %}
