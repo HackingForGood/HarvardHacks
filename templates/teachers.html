@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/teachers.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div id="classroom">
+    </div>
+</div>
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="time-table">
+        </tbody>
+    </table>
+</div>
+{% endblock %}

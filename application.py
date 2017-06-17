@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 from flask_jsglue import JSGlue
 
@@ -17,7 +17,11 @@ def login():
 @app.route("/login/verify", methods=["POST"])
 def verify_login():
     # TODO: add verification
-    return True
+    return "done"
+
+@app.route("/teachers/")
+def teachers():
+    return render_template("teachers.html")
 
 @app.route("/teachers/config")
 def teacher_config():

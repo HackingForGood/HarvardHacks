@@ -4,7 +4,6 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-
   authenticate(user, token);
 
 }).catch(function(error) {
@@ -19,12 +18,5 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 
 function authenticate(user, token) {
-    var parameters = {
-        'user': user.email,
-        'token': token
-    };
-    $.post(Flask.url_for('verify_login'), parameters)
-    .done(function(data, textStatus, jqXHR) {
-        console.log('test');
-    });
+    window.location = Flask.url_for('teachers');
 }
