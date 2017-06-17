@@ -12,7 +12,12 @@
     </div>
 
     <div class="classes">
-        <button type="button" class="btn btn-primary">?</button>
+        <!-- <a href="{{ url_for('student.feedback') }}">Roster</a> -->
+        <!-- todo: for loop over classes -->
+        <div class="class" id="m" onclick="checkIn()"> Math</div>
+        <div class="class" id="e">English</div>
+        <div class="class" id="s">Science</div>
+        <div class="class" id="add">Add Class</div>
     </div>
 </div>
 {% endblock %}

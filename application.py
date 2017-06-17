@@ -26,3 +26,7 @@ def teacher_config():
 @app.route("/students")
 def student():
     return render_template("student/index.html")
+
+# @app.route("/students/feedback")
+# def studentFeedback():
+#     return render_template("student/feedback.html")
