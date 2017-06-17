@@ -9,11 +9,10 @@ function class_load() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             configure(user);
-            show_classroom();
         } else {
-            window.location = Flask.url_for('index');
         }
     });
+    show_classroom();
 }
 
 function configure(user) {
