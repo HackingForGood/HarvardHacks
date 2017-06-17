@@ -2,7 +2,13 @@ window.onload = function() {
 }
 
 
-$( ".remove" ).click(function() {
+$( ".removeTeachers" ).click(function() {
+    console.log("remove clicked");
+    console.log($(this).siblings("select").find(":selected"));
+    $( this ).siblings( "select").find(":selected").remove();
+  });
+
+$( ".removeStudents" ).click(function() {
     console.log("remove clicked");
     console.log($(this).siblings("select").find(":selected"));
     $( this ).siblings( "select").find(":selected").remove();
@@ -16,3 +22,15 @@ $( ".remove" ).click(function() {
                     .attr("value",newoption)
                     .text(newoption)); ;
     });
+
+var db = firebase.database();
+
+function writeTeacherData(teacherId, username, email) {
+  db.ref('users/' + teacherId).set({
+    username: username,
+    email: email,
+  });
+}
+
+writeTeacherData(1234, "hailey", "hjames");
+console.log("ran");
