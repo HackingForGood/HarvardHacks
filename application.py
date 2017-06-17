@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, jsonify, render_template, request, session
 
 from flask_jsglue import JSGlue
