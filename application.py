@@ -25,4 +25,4 @@ def teacher_config():
 
 @app.route("/students")
 def student():
-    pass
+    return render_template("student/index.html")
